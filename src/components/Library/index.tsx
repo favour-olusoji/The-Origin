@@ -14,6 +14,11 @@ const Movies = () => {
   return (
     <>
       <div style={{ maxWidth: "1400px", margin: "auto" }}>
+        <div className="animate-fade-in-left px-6 pt-4 text-xl italic text-yellow-500">
+          Pick a movie and get started with language learning journey
+          <span className="inline-block animate-bounce">🚀🚀🚀</span>...
+        </div>
+
         <div className=" bg-black p-4">
           {uniqueMoviesCategories.map((item, index) => (
             <MovieSection category={item} />

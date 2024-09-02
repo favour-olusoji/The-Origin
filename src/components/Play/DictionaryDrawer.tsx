@@ -39,14 +39,13 @@ export const DictionaryDrawer = (props) => {
       if (!response.result.success) {
         throw new Error("Failed to create flashcard");
       }
-
     } catch (err) {
       setError(err.message || "Failed to create flashcard");
     } finally {
       setShowSnackbar(true);
       setShowFlashCardButton(false);
       setShowFlash(true);
-      setLoading(false); 
+      setLoading(false);
     }
   };
 
@@ -79,7 +78,10 @@ export const DictionaryDrawer = (props) => {
             <SpeakerphoneIcon className="h-6 w-6 text-red-500" />
           </div>
           <div
-            onClick={props.toggleDictionarySidebar}
+            onClick={() => {
+              props.toggleDictionarySidebar();
+              props.togglePlayPause();
+            }}
             className="flex cursor-pointer justify-end"
           >
             <XClose />
@@ -146,7 +148,7 @@ export const DictionaryDrawer = (props) => {
       </div>
 
       {showFlash && (
-        <div className="absolute right-0 bottom-0 w-90 -z-0">
+        <div className="w-90 absolute bottom-0 right-0 -z-0">
           <img src="/gifs/rflash.gif" alt="" />
         </div>
       )}

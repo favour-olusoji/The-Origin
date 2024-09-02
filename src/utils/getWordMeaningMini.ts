@@ -17,7 +17,7 @@ const getWordMeaningMini = async (word, currentLanguage, targetLanguage) => {
   };
 
   const data = {
-    model: "gpt-4-turbo",
+    model: "gpt-4o-mini",
     messages: [
       {
         role: "user",

@@ -26,7 +26,7 @@ const Watch = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             position: "relative",
-            height: "85vh",
+            height: "80vh",
           }}
           className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pt-[180px] 2xl:pt-[210px]"
         >

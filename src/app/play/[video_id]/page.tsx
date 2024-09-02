@@ -270,6 +270,7 @@ const VideoPlayer = ({ params }: { params: { video_id: string } }) => {
           clickedWord={clickedWord}
           wordData={miniDictionaryWordData}
           wordMeaningLoading={wordMeaningLoading}
+          togglePlayPause={togglePlayPause}
         />
       )}
       <div className="video-container w-full">
@@ -292,6 +293,7 @@ const VideoPlayer = ({ params }: { params: { video_id: string } }) => {
             currentSubtitle={currentPrimarySubtitleSnippet}
             convertto={selectedPrimarySubtitle?.convertto}
             style={{ position: "absolute", bottom: "80px" }}
+            togglePlayPause={togglePlayPause}
           />
         )}
 
@@ -301,7 +303,8 @@ const VideoPlayer = ({ params }: { params: { video_id: string } }) => {
             language={selectedSecondarySubtitle?.language}
             currentSubtitle={currentSecondarySubtitleSnippet}
             convertto={selectedSecondarySubtitle?.convertto}
-            style={{ position: "absolute", bottom: "50px", color: "#f41b3be6" }}
+            style={{ position: "absolute", bottom: "50px", color: "#FDEB37" }}
+            togglePlayPause={togglePlayPause}
           />
         )}
 
@@ -361,6 +364,7 @@ const VideoPlayer = ({ params }: { params: { video_id: string } }) => {
             clickedWordLanguage={clickedWordLanguage}
             wordMeaningLoading={wordMeaningLoading}
             selectedMovie={selectedMovie}
+            togglePlayPause={togglePlayPause}
           />
         )}
 

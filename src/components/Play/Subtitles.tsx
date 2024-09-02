@@ -7,6 +7,7 @@ const SubtitleText = (props: {
   language: string;
   convertto: string;
   style?: React.CSSProperties;
+  togglePlayPause: any;
 }) => {
   return (
     <div style={{ position: "absolute", bottom: "50px", ...props.style }}>
@@ -19,10 +20,12 @@ const SubtitleText = (props: {
             {props.currentSubtitle.split(" ").map((word, idx) => (
               <span
                 key={idx}
-                onClick={() =>
-                  props.handleWordClick(word, props.language, props.convertto)
+                onClick={() =>{
+                  props.handleWordClick(word, props.language, props.convertto);
+                  props.togglePlayPause();
                 }
-                className="cursor-pointer hover:bg-yellow-500 hover:px-1 hover:py-1 hover:rounded-md hover:font-outline-4" 
+                }
+                className="cursor-pointer hover:bg-orange-700 hover:px-1 hover:py-1 hover:rounded-md hover:font-outline-4" 
               >
                 {word}{" "}
               </span>

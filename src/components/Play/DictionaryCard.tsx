@@ -11,6 +11,7 @@ export const DictionaryCard = (props: {
   clickedWord: string;
   wordData; // Data from OpenAI API
   wordMeaningLoading: boolean;
+  togglePlayPause: any;
 }) => {
   if (props.wordMeaningLoading) {
     return (
@@ -40,7 +41,10 @@ export const DictionaryCard = (props: {
             <SpeakerphoneIcon className="h-6 w-6 text-red-500" />
           </div>
           <div
-            onClick={props.toggleDictionaryCard}
+            onClick={() => {
+              props.toggleDictionaryCard();
+              props.togglePlayPause();
+            }}
             className="flex cursor-pointer justify-end"
           >
             <XClose />

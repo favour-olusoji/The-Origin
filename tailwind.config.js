@@ -34,6 +34,17 @@ module.exports = {
       // => @media (min-width: 1400px) { ... }
     },
     extend: {
+
+      keyframes: {
+        'fade-in-left': {
+          '0%': { opacity: '0', transform: 'translateX(-20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        'fade-in-left': 'fade-in-left 2.0s ease-out',
+      },
+
       colors: {
         current: "currentColor",
         transparent: "transparent",
@@ -75,6 +86,7 @@ module.exports = {
       dropShadow: {
         three: "0px 5px 15px rgba(6, 8, 15, 0.05)",
       },
+      
     },
   },
   plugins: [],
